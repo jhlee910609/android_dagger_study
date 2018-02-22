@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.example.junheelee.dagger2example.R;
-import com.example.junheelee.dagger2example.home.sharedPreferences.DaggerMyComponent;
 import com.example.junheelee.dagger2example.home.sharedPreferences.MySharedPreferences;
 import com.example.junheelee.dagger2example.home.sharedPreferences.SharedPreferencesModule;
 

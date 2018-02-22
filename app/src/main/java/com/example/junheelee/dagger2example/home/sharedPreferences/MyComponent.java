@@ -4,14 +4,16 @@ import com.example.junheelee.dagger2example.home.BaseActivity;
 import com.example.junheelee.dagger2example.home.Main2Activity;
 import com.example.junheelee.dagger2example.home.MainActivity;
 
+import javax.inject.Singleton;
+
 import dagger.Component;
 import dagger.Module;
 
 /**
  * Created by junhee.lee on 2018. 2. 21..
  */
-@Component(modules = SharedPreferencesModule.class)
-@MyApplicationScope
+@Singleton
+@Component(modules = {ApiModule.class, SharedPreferencesModule.class})
 public interface MyComponent {
 
     void inject(MainActivity mainActivity);

@@ -1,20 +1,13 @@
 package com.example.junheelee.dagger2example.home;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.junheelee.dagger2example.R;
-import com.example.junheelee.dagger2example.home.sharedPreferences.MySharedPreferences;
 
-import javax.inject.Inject;
-
-import dagger.multibindings.IntoMap;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 

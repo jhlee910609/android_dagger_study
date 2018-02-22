@@ -2,6 +2,7 @@ package com.example.junheelee.dagger2example.home;
 
 import android.app.Application;
 
+import com.example.junheelee.dagger2example.home.sharedPreferences.ApiModule;
 import com.example.junheelee.dagger2example.home.sharedPreferences.DaggerMyComponent;
 import com.example.junheelee.dagger2example.home.sharedPreferences.MyComponent;
 import com.example.junheelee.dagger2example.home.sharedPreferences.SharedPreferencesModule;
@@ -21,8 +22,8 @@ public class MyApplication extends Application {
         component = DaggerMyComponent
                 .builder()
                 .sharedPreferencesModule(new SharedPreferencesModule(getApplicationContext()))
+                .apiModule(new ApiModule())
                 .build();
-
     }
 
     public MyComponent getComponent() {
