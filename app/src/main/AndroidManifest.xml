@@ -17,7 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home.Main2Activity"></activity>
+        <activity android:name=".home.Main2Activity" />
+        <activity android:name=".home.Main3Activity" />
+        <activity android:name=".home.Main4Activity"></activity>
     </application>
 
 </manifest>

@@ -29,6 +29,15 @@
 
 ### 3. Dagger2 필수 개념
 ![](http://cfile9.uf.tistory.com/image/2539C038564196F439BD76)
+Base elements (annotations) of Dagger 2
+
+- `@Inject` — base annotation whereby the “dependency is requested”
+- `@Module` — classes which methods “provide dependencies”
+- `@Provide` — methods inside @Module, which “tell Dagger how we want to build and present a dependency“
+- `@Component` — bridge between @Inject and @Module
+- `@Scope` — enables to create global and local singletons
+- `@Qualifier` — if different objects of the same type are necessary
+- 
 ##### 3.1. Module
 - 필요한 객체 제공하는 역할을 하며, 클래스 단위로 구성되어 있음
 ```
@@ -47,6 +56,13 @@ class BugerModule {
 
 
 
+- annotaion 
+```
+@Scope
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Singleton {
+}
+```
 
 
 
@@ -56,10 +72,11 @@ class BugerModule {
 
 
 
-###### 5. 참고할만한 개념
+
+###### 5. reference
 - java reflectioin
 - JSR330
-- 
+- [medium article about dagger2](https://android.jlelse.eu/dagger-2-part-i-basic-principles-graph-dependencies-scopes-3dfd032ccd82)
 
 
 

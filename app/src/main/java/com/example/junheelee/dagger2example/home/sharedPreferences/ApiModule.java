@@ -1,6 +1,9 @@
 package com.example.junheelee.dagger2example.home.sharedPreferences;
 
+import com.example.junheelee.dagger2example.home.data.User;
 import com.google.gson.Gson;
+
+import org.intellij.lang.annotations.PrintFormat;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -29,4 +32,11 @@ public class ApiModule {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
+
+    @Provides
+    @Singleton
+    User getUser(){
+        return new User();
+    }
+
 }
