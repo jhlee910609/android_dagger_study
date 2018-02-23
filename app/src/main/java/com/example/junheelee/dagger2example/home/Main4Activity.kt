@@ -20,7 +20,7 @@ class Main4Activity : BaseActivity() {
 
         (applicationContext as MyApplication).component.inject(this)
 
-        tv = findViewById<TextView>(R.id.textView2) as TextView
+        tv = findViewById(R.id.textView2) as TextView
         tv.text = "user : ${user.name}, age : ${user.age}"
         Toast.makeText(this, "user : ${user.name}, age : ${user.age}", Toast.LENGTH_SHORT).show()
     }
