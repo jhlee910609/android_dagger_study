@@ -18,10 +18,12 @@ import com.jakewharton.rxbinding2.widget.TextViewTextChangeEvent;
 import org.reactivestreams.Subscription;
 
 import java.sql.Time;
+import java.util.Observable;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 import io.reactivex.observers.DisposableObserver;
 
@@ -66,6 +68,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
                     }
                 });
+
+        String balls[] = {"1", "3", "5"};
+        io.reactivex.Observable<String> src = io.reactivex.Observable.fromArray(balls)
+                .flatMap(b -> io.reactivex.Observable.just(b + "<>"));
+
+        src.subscribe(s -> Log.e(TAG, s));
+
+
+
     }
 
     private String addA() {
