@@ -23,6 +23,15 @@ allprojects {
     }
 }
 
+ext {
+    rxJavaVer = '2.1.9'
+    rxBindingVer = '2.1.1'
+    okHttpVer = '3.9.1'
+    retrofitVer = '2.3.0'
+    daggerVer = '2.11'
+
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
