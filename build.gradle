@@ -29,6 +29,8 @@ ext {
     okHttpVer = '3.9.1'
     retrofitVer = '2.3.0'
     daggerVer = '2.11'
+    autoValueVer ='1.5'
+    rxReplyVer ='2.0.0'
 
 }
 

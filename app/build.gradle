@@ -5,7 +5,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.junheelee.dagger2example"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -45,8 +45,17 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVer"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVer"
 
+    annotationProcessor "com.google.auto.value:auto-value:$autoValueVer"
+    compileOnly "com.google.auto.value:auto-value:$autoValueVer"
+    compile "com.jakewharton.rxrelay2:rxrelay:$rxReplyVer"
 
-    testCompile "org.mockito:mockito-core:2.+"
+    compile 'com.bluelinelabs:conductor:2.1.4'
+
+
+
+
+
+    implementation "org.mockito:mockito-core:2.+"
 
 
 }
